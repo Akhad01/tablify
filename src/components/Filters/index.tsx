@@ -1,8 +1,8 @@
 import React from 'react';
 import { HStack, Icon, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import type { ColumnFiltersState } from '@tanstack/react-table';
-import SearchIcon from './icons/SearchIcon';
-import FilterPopover from './FilterPopover';
+import SearchIcon from '../icons/SearchIcon';
+import FilterPopover from '../FilterPopover';
 
 interface FiltersProps {
   columnFilters: ColumnFiltersState

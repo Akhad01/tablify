@@ -15,10 +15,10 @@ import {
 } from '@chakra-ui/react'
 import type { ColumnFilter } from '@tanstack/react-table'
 
-import FilterIcon from './icons/FilterIcon'
-import { STATUSES } from '../data'
-import { ColorIcon } from './StatusCell'
-import type { Status } from '../types'
+import FilterIcon from '../icons/FilterIcon'
+import { STATUSES } from '../../data'
+import { ColorIcon } from '../StatusCell'
+import type { Status } from '../../types'
 
 interface StatusItemProps {
   status: Status

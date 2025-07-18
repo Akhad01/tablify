@@ -3,7 +3,7 @@ import { Box, Center, Icon } from '@chakra-ui/react';
 import DatePicker from "react-datepicker";
 import type { CellContext } from '@tanstack/react-table';
 
-import CalendarIcon from './icons/CalendarIcon';
+import CalendarIcon from '../icons/CalendarIcon';
 import "react-datepicker/dist/react-datepicker.css";
 
 type DateCustomInputProps = {

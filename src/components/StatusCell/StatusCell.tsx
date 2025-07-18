@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
-import { STATUSES } from '../data';
+import { STATUSES } from '../../data';
 import type { CellContext } from '@tanstack/react-table';
-import type { Status, Task } from '../types';
+import type { Status, Task } from '../../types';
 
 interface ColorIconProps {
   color: string;
