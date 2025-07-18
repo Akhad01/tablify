@@ -1,11 +1,11 @@
 import React from 'react'
 import { Box, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
-import { STATUSES, type Status, type Task } from '../data copy';
+import { STATUSES, type Status, type Task } from '../data';
 import type { CellContext } from '@tanstack/react-table';
 
 interface ColorIconProps {
   color: string;
-  [key: string]: any;
+  [key: string]: string | number;
 }
 
 export const ColorIcon: React.FC<ColorIconProps> = ({color, ...props}) => (

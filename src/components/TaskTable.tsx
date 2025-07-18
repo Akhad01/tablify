@@ -4,7 +4,7 @@ import { flexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel
 
 import EditableCell from "./EditableCell";
 
-import DATA, { type Status, type Task } from "../data copy";
+import DATA, { type Status, type Task } from "../data";
 import StatusCell from "./StatusCell";
 import DataCell from "./DataCell";
 import Filters from "./Filters";
@@ -45,6 +45,7 @@ const columns: ColumnDef<Task>[] = [
   {
     accessorKey: 'registrationDate',
     header: 'RegistrationDate',
+    size: 225,
     cell: DataCell
   },
   
@@ -79,8 +80,6 @@ const TaskTable = () => {
     }
   })
 
-  console.log('data', data);
-  
 
   return <Box>
     <Filters columnFilters={columnFilters} setColumnFilters={setColumnFilters} />
@@ -131,8 +130,8 @@ const TaskTable = () => {
       }
     </Box>
     <br />
-    <Text mb={2}>
-      Page
+    <Text mb={2}> 
+      Page {' '}
       { table.getState().pagination.pageIndex + 1} of{' '}
       { table.getPageCount() }
     </Text>

@@ -5,160 +5,70 @@ export interface Status {
 }
 
 export interface Task {
-  task: string;
+  name: string;
+  inn: string;
   status: Status | null;
-  due: Date | null;
-  notes: string;
+  registrationDate: Date | null;
 }
 
-const STATUS_ON_DECK = { id: 1, name: "On Deck", color: "blue.300" };
-const STATUS_IN_PROGRESS: Status = {
-  id: 2,
-  name: "In Progress",
-  color: "yellow.400",
-};
-const STATUS_TESTING = { id: 3, name: "Testing", color: "pink.300" };
-const STATUS_DEPLOYED = { id: 4, name: "Deployed", color: "green.300" };
-export const STATUSES: Status[] = [
-  STATUS_ON_DECK,
-  STATUS_IN_PROGRESS,
-  STATUS_TESTING,
-  STATUS_DEPLOYED,
-];
 
-const DATA: Task[] = [
-  {
-    task: "Add a New Feature",
-    status: STATUS_ON_DECK,
-    due: new Date("2023/10/15"),
-    notes: "This is a note",
-  },
-  {
-    task: "Write Integration Tests",
-    status: STATUS_IN_PROGRESS,
-    due: null,
-    notes: "Use Jest",
-  },
-  {
-    task: "Add Instagram Integration",
-    status: STATUS_DEPLOYED,
-    due: null,
-    notes: "",
-  },
-  {
-    task: "Cleanup Database",
-    status: null,
-    due: new Date("2023/02/15"),
-    notes: "Remove old data",
-  },
-  {
-    task: "Refactor API Endpoints",
-    status: STATUS_TESTING,
-    due: null,
-    notes: "",
-  },
-  {
-    task: "Add Documentation to API",
-    status: null,
-    due: new Date("2023/09/12"),
-    notes: "Add JS Docs to all endpoints",
-  },
-  {
-    task: "Update NPM Packages",
-    status: STATUS_IN_PROGRESS,
-    due: null,
-    notes: "Upgrade React & Chakra UI",
-  },
-  {
-    task: "Optimize Database Queries",
-    status: STATUS_IN_PROGRESS,
-    due: null,
-    notes: "Optimize slow queries.",
-  },
-  {
-    task: "Implement User Authentication",
-    status: STATUS_ON_DECK,
-    due: new Date("2023/11/08"),
-    notes: "OAuth2 and JWT auth.",
-  },
-  {
-    task: "Design User Interface Mockups",
-    status: null,
-    due: new Date("2023/09/30"),
-    notes: "Create UI mockups.",
-  },
-  {
-    task: "Fix Cross-Browser Compatibility Issues",
-    status: STATUS_IN_PROGRESS,
-    due: null,
-    notes: "Resolve browser issues.",
-  },
-  {
-    task: "Perform Security Audit",
-    status: null,
-    due: new Date("2023/10/22"),
-    notes: "Security audit.",
-  },
-  {
-    task: "Create User Onboarding Tutorial",
-    status: STATUS_ON_DECK,
-    due: new Date("2023/11/15"),
-    notes: "User onboarding guide.",
-  },
-  {
-    task: "Optimize Frontend Performance",
-    status: STATUS_IN_PROGRESS,
-    due: null,
-    notes: "Improve performance.",
-  },
-  {
-    task: "Conduct Code Review",
-    status: null,
-    due: new Date("2023/10/05"),
-    notes: "Code review meeting.",
-  },
-  {
-    task: "Implement Continuous Integration",
-    status: STATUS_ON_DECK,
-    due: new Date("2023/11/01"),
-    notes: "Set up CI/CD pipelines.",
-  },
-  {
-    task: "Migrate to Cloud Hosting",
-    status: STATUS_DEPLOYED,
-    due: null,
-    notes: "Cloud migration.",
-  },
-  {
-    task: "Create User Feedback Survey",
-    status: null,
-    due: new Date("2023/09/25"),
-    notes: "User feedback survey.",
-  },
-  {
-    task: "Update User Documentation",
-    status: STATUS_TESTING,
-    due: null,
-    notes: "Revise documentation.",
-  },
-  {
-    task: "Bug Fixing and QA Testing",
-    status: null,
-    due: new Date("2023/10/10"),
-    notes: "Fix bugs and QA.",
-  },
-  {
-    task: "Implement Mobile App Support",
-    status: STATUS_IN_PROGRESS,
-    due: null,
-    notes: "Add mobile support.",
-  },
-  {
-    task: "Refine User Permission System",
-    status: null,
-    due: new Date("2023/09/18"),
-    notes: "Enhance permissions.",
-  },
+const STATUS_ACTIVE: Status = { id: 1, name: "Активен", color: "green.400" };
+const STATUS_PENDING: Status = { id: 2, name: "Ожидание", color: "yellow.400" };
+const STATUS_BLOCKED: Status = { id: 3, name: "Заблокирован", color: "red.400" };
+
+export const STATUSES: Status[] = [STATUS_ACTIVE, STATUS_PENDING, STATUS_BLOCKED];
+
+export const DATA: Task[] = [
+  { name: "ООО Ромашка", inn: "123456789", status: STATUS_ACTIVE, registrationDate: new Date("2021-07-12") },
+  { name: "ИП Иванов", inn: "9876543210", status: STATUS_PENDING, registrationDate: new Date("2022-01-04") },
+  { name: "ООО Сила", inn: "1111222233", status: STATUS_BLOCKED, registrationDate: new Date("2023-03-15") },
+  { name: "ЗАО ТехноПлюс", inn: "2233445566", status: STATUS_ACTIVE, registrationDate: new Date("2020-09-01") },
+  { name: "ИП Смирнов", inn: "3344556677", status: STATUS_PENDING, registrationDate: new Date("2023-05-25") },
+  { name: "ООО АльфаГрупп", inn: "4455667788", status: STATUS_BLOCKED, registrationDate: new Date("2021-12-10") },
+  { name: "ОАО Велес", inn: "5566778899", status: STATUS_ACTIVE, registrationDate: new Date("2022-08-18") },
+  { name: "ИП Козлов", inn: "6677889900", status: STATUS_PENDING, registrationDate: new Date("2024-01-30") },
+  { name: "ООО Звезда", inn: "7788990011", status: STATUS_ACTIVE, registrationDate: new Date("2019-11-11") },
+  { name: "ЧУП Глобал", inn: "8899001122", status: STATUS_BLOCKED, registrationDate: new Date("2020-02-20") },
+
+  { name: "ИП Синицын", inn: "1010101010", status: STATUS_ACTIVE, registrationDate: new Date("2022-06-10") },
+  { name: "ООО Аврора", inn: "2020202020", status: STATUS_PENDING, registrationDate: new Date("2023-01-22") },
+  { name: "ЗАО Орбита", inn: "3030303030", status: STATUS_BLOCKED, registrationDate: new Date("2021-03-03") },
+  { name: "ЧП Электро", inn: "4040404040", status: STATUS_ACTIVE, registrationDate: new Date("2020-10-14") },
+  { name: "ООО Мотор", inn: "5050505050", status: STATUS_PENDING, registrationDate: new Date("2023-07-07") },
+  { name: "ИП Калашников", inn: "6060606060", status: STATUS_BLOCKED, registrationDate: new Date("2019-12-19") },
+  { name: "ООО ЭкоЛайн", inn: "7070707070", status: STATUS_ACTIVE, registrationDate: new Date("2024-04-04") },
+  { name: "ОАО Беркут", inn: "8080808080", status: STATUS_PENDING, registrationDate: new Date("2022-09-09") },
+  { name: "ИП Титов", inn: "9090909090", status: STATUS_BLOCKED, registrationDate: new Date("2021-11-30") },
+  { name: "ЗАО Комфорт", inn: "1212121212", status: STATUS_ACTIVE, registrationDate: new Date("2020-01-01") },
+
+  { name: "ООО Лайт", inn: "1313131313", status: STATUS_PENDING, registrationDate: new Date("2022-05-15") },
+  { name: "ЧП ХимПром", inn: "1414141414", status: STATUS_BLOCKED, registrationDate: new Date("2021-02-10") },
+  { name: "ИП Дорога", inn: "1515151515", status: STATUS_ACTIVE, registrationDate: new Date("2023-08-20") },
+  { name: "ООО АгроТех", inn: "1616161616", status: STATUS_PENDING, registrationDate: new Date("2020-06-06") },
+  { name: "ИП Лукин", inn: "1717171717", status: STATUS_BLOCKED, registrationDate: new Date("2022-03-14") },
+  { name: "ОАО БелТех", inn: "1818181818", status: STATUS_ACTIVE, registrationDate: new Date("2019-07-01") },
+  { name: "ООО Гарант", inn: "1919191919", status: STATUS_PENDING, registrationDate: new Date("2023-10-17") },
+  { name: "ИП Орлов", inn: "2323232323", status: STATUS_BLOCKED, registrationDate: new Date("2021-04-04") },
+  { name: "ООО Хайтек", inn: "2424242424", status: STATUS_ACTIVE, registrationDate: new Date("2022-12-25") },
+  { name: "ЗАО ГринТех", inn: "2525252525", status: STATUS_PENDING, registrationDate: new Date("2020-05-20") },
+
+  { name: "ИП Сокол", inn: "2626262626", status: STATUS_BLOCKED, registrationDate: new Date("2021-09-09") },
+  { name: "ООО Экспресс", inn: "2727272727", status: STATUS_ACTIVE, registrationDate: new Date("2023-11-05") },
+  { name: "ЧП Алмаз", inn: "2828282828", status: STATUS_PENDING, registrationDate: new Date("2020-08-08") },
+  { name: "ООО Сфера", inn: "2929292929", status: STATUS_BLOCKED, registrationDate: new Date("2022-10-10") },
+  { name: "ИП Сибирь", inn: "3031313131", status: STATUS_ACTIVE, registrationDate: new Date("2021-06-30") },
+  { name: "ОАО Неон", inn: "3131313131", status: STATUS_PENDING, registrationDate: new Date("2023-02-14") },
+  { name: "ООО Контакт", inn: "3232323232", status: STATUS_BLOCKED, registrationDate: new Date("2020-03-03") },
+  { name: "ИП Белов", inn: "3333333333", status: STATUS_ACTIVE, registrationDate: new Date("2022-07-22") },
+  { name: "ЗАО Меридиан", inn: "3434343434", status: STATUS_PENDING, registrationDate: new Date("2023-03-03") },
+  { name: "ООО Лидер", inn: "3535353535", status: STATUS_BLOCKED, registrationDate: new Date("2021-08-08") },
+
+  { name: "ИП Громов", inn: "3636363636", status: STATUS_ACTIVE, registrationDate: new Date("2020-02-29") },
+  { name: "ООО Океан", inn: "3737373737", status: STATUS_PENDING, registrationDate: new Date("2021-01-15") },
+  { name: "ЗАО Бета", inn: "3838383838", status: STATUS_BLOCKED, registrationDate: new Date("2022-11-11") },
+  { name: "ЧП Восток", inn: "3939393939", status: STATUS_ACTIVE, registrationDate: new Date("2024-05-01") },
+  { name: "ООО Лес", inn: "4040404040", status: STATUS_PENDING, registrationDate: new Date("2023-12-12") },
+  { name: "ИП Волков", inn: "4141414141", status: STATUS_BLOCKED, registrationDate: new Date("2020-04-04") },
 ];
 
 export default DATA;

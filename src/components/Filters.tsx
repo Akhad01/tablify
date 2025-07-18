@@ -1,8 +1,8 @@
 import React from 'react';
 import { HStack, Icon, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
+import type { ColumnFiltersState } from '@tanstack/react-table';
 import SearchIcon from './icons/SearchIcon';
 import FilterPopover from './FilterPopover';
-import type { ColumnFiltersState } from '@tanstack/react-table';
 
 interface FiltersProps {
   columnFilters: ColumnFiltersState
@@ -10,7 +10,7 @@ interface FiltersProps {
 }
 
 const Filters: React.FC<FiltersProps> = ({ columnFilters, setColumnFilters }) => {
-  const taskName = columnFilters.find((f) => f.id === 'task')?.value || '';
+  const taskName = columnFilters.find((f) => f.id === 'name')?.value || '';
 
   const onFilterChange = (id: string, value: unknown) => {
     setColumnFilters((prevFilters: ColumnFiltersState) => {
@@ -31,10 +31,10 @@ const Filters: React.FC<FiltersProps> = ({ columnFilters, setColumnFilters }) =>
         <Input
           type='text'
           variant='filled'
-          placeholder='Task name'
+          placeholder='Search by names'
           borderRadius={5}
           value={taskName as string}
-          onChange={(e) => onFilterChange('task', e.target.value)}
+          onChange={(e) => onFilterChange('name', e.target.value)}
         />
       </InputGroup>
       <FilterPopover 
