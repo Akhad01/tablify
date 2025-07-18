@@ -4,20 +4,23 @@ import { flexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel
 
 import EditableCell from "./EditableCell";
 
-import DATA, { type Status, type Task } from "../data";
+import DATA from "../data";
 import StatusCell from "./StatusCell";
 import DataCell from "./DataCell";
 import Filters from "./Filters";
 import SortIcon from "./icons/SortIcon";
+import type { Status, Task } from "../types";
+import { useTasks } from "../hooks/useTasks";
 
 const statusFilterFn: FilterFn<Task> = (
   row: Row<Task>,
   columnId: string,
-  filterStatuses: number[]
+  filterStatuses: string[]
 ) => {
   if (filterStatuses.length === 0) return true;
   const status = row.getValue(columnId) as Status | null;
-  return filterStatuses.includes(status?.id as number);
+  
+  return status ? filterStatuses.includes(String(status?.id)) : false;
 };
 
 const columns: ColumnDef<Task>[] = [
@@ -52,10 +55,11 @@ const columns: ColumnDef<Task>[] = [
 ]
 
 const TaskTable = () => {
-  const [data, setData] = useState(DATA)
+  // const [data, setData] = useState(DATA)
+  const { tasks, statuses, loading, error, updateTask } = useTasks();
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
   const table = useReactTable({
-    data,
+    data: tasks,
     columns,
     state: {
       columnFilters,
@@ -66,7 +70,7 @@ const TaskTable = () => {
     getSortedRowModel: getSortedRowModel(),
     columnResizeMode: 'onChange',
     meta: {
-      updateData: (rowIndex: number, columnId: string, value: string) => setData(
+      updateData: (rowIndex: number, columnId: string, value: string) => updateTask(
         prev => prev.map(
           (row, index) => 
             index === rowIndex 
@@ -79,6 +83,9 @@ const TaskTable = () => {
       )
     }
   })
+
+  if (loading) return <Box>Loading...</Box>;
+  if (error) return <Box>Error: {error}</Box>;
 
 
   return <Box>
@@ -114,7 +121,6 @@ const TaskTable = () => {
       {
         table.getRowModel().rows.map(row => <Box className="tr" key={row.id}>
           {row.getVisibleCells().map(cell => {
-            console.log('cell', cell);
             
             return (
             <Box className="td" w={cell.column.getSize()} key={cell.id}>

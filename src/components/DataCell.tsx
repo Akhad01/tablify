@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react'
 import { Box, Center, Icon } from '@chakra-ui/react';
-
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import CalendarIcon from './icons/CalendarIcon';
 import type { CellContext } from '@tanstack/react-table';
+
+import CalendarIcon from './icons/CalendarIcon';
+import "react-datepicker/dist/react-datepicker.css";
 
 type DateCustomInputProps = {
   value?: string;

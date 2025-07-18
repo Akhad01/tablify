@@ -16,8 +16,9 @@ import {
 import type { ColumnFilter } from '@tanstack/react-table'
 
 import FilterIcon from './icons/FilterIcon'
-import { STATUSES, type Status } from '../data'
+import { STATUSES } from '../data'
 import { ColorIcon } from './StatusCell'
+import type { Status } from '../types'
 
 interface StatusItemProps {
   status: Status
@@ -72,6 +73,9 @@ const FilterPopover: React.FC<FilterPopoverProps> = ({ columnFilters, setColumnF
 const filterStatuses: string[] = Array.isArray(rawStatusFilter)
   ? rawStatusFilter.map(String)
   : []
+
+  console.log('rawStatusFilter', rawStatusFilter);
+  
 
   return (
     <Popover isLazy>

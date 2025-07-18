@@ -1,16 +1,4 @@
-export interface Status {
-  id: number;
-  name: string;
-  color: string;
-}
-
-export interface Task {
-  name: string;
-  inn: string;
-  status: Status | null;
-  registrationDate: Date | null;
-}
-
+import type { Status, Task } from "./types";
 
 const STATUS_ACTIVE: Status = { id: 1, name: "Активен", color: "green.400" };
 const STATUS_PENDING: Status = { id: 2, name: "Ожидание", color: "yellow.400" };

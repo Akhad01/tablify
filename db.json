@@ -1,0 +1,481 @@
+{
+  "statuses": [
+    {
+      "id": 1,
+      "name": "Активен",
+      "color": "green.400"
+    },
+    {
+      "id": 2,
+      "name": "Ожидание",
+      "color": "yellow.400"
+    },
+    {
+      "id": 3,
+      "name": "Заблокирован",
+      "color": "red.400"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "ООО Ромашка",
+      "inn": "123456789",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2021-07-12T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Иванов",
+      "inn": "9876543210",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2022-01-04T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Сила",
+      "inn": "1111222233",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2023-03-15T00:00:00.000Z"
+    },
+    {
+      "name": "ЗАО ТехноПлюс",
+      "inn": "2233445566",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2020-09-01T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Смирнов",
+      "inn": "3344556677",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2023-05-25T00:00:00.000Z"
+    },
+    {
+      "name": "ООО АльфаГрупп",
+      "inn": "4455667788",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2021-12-10T00:00:00.000Z"
+    },
+    {
+      "name": "ОАО Велес",
+      "inn": "5566778899",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2022-08-18T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Козлов",
+      "inn": "6677889900",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2024-01-30T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Звезда",
+      "inn": "7788990011",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2019-11-11T00:00:00.000Z"
+    },
+    {
+      "name": "ЧУП Глобал",
+      "inn": "8899001122",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2020-02-20T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Синицын",
+      "inn": "1010101010",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2022-06-10T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Аврора",
+      "inn": "2020202020",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2023-01-22T00:00:00.000Z"
+    },
+    {
+      "name": "ЗАО Орбита",
+      "inn": "3030303030",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2021-03-03T00:00:00.000Z"
+    },
+    {
+      "name": "ЧП Электро",
+      "inn": "4040404040",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2020-10-14T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Мотор",
+      "inn": "5050505050",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2023-07-07T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Калашников",
+      "inn": "6060606060",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2019-12-19T00:00:00.000Z"
+    },
+    {
+      "name": "ООО ЭкоЛайн",
+      "inn": "7070707070",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2024-04-04T00:00:00.000Z"
+    },
+    {
+      "name": "ОАО Беркут",
+      "inn": "8080808080",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2022-09-09T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Титов",
+      "inn": "9090909090",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2021-11-30T00:00:00.000Z"
+    },
+    {
+      "name": "ЗАО Комфорт",
+      "inn": "1212121212",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Лайт",
+      "inn": "1313131313",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2022-05-15T00:00:00.000Z"
+    },
+    {
+      "name": "ЧП ХимПром",
+      "inn": "1414141414",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2021-02-10T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Дорога",
+      "inn": "1515151515",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2023-08-20T00:00:00.000Z"
+    },
+    {
+      "name": "ООО АгроТех",
+      "inn": "1616161616",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2020-06-06T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Лукин",
+      "inn": "1717171717",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2022-03-14T00:00:00.000Z"
+    },
+    {
+      "name": "ОАО БелТех",
+      "inn": "1818181818",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2019-07-01T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Гарант",
+      "inn": "1919191919",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2023-10-17T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Орлов",
+      "inn": "2323232323",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2021-04-04T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Хайтек",
+      "inn": "2424242424",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2022-12-25T00:00:00.000Z"
+    },
+    {
+      "name": "ЗАО ГринТех",
+      "inn": "2525252525",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2020-05-20T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Сокол",
+      "inn": "2626262626",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2021-09-09T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Экспресс",
+      "inn": "2727272727",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2023-11-05T00:00:00.000Z"
+    },
+    {
+      "name": "ЧП Алмаз",
+      "inn": "2828282828",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2020-08-08T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Сфера",
+      "inn": "2929292929",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2022-10-10T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Сибирь",
+      "inn": "3031313131",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2021-06-30T00:00:00.000Z"
+    },
+    {
+      "name": "ОАО Неон",
+      "inn": "3131313131",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2023-02-14T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Контакт",
+      "inn": "3232323232",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2020-03-03T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Белов",
+      "inn": "3333333333",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2022-07-22T00:00:00.000Z"
+    },
+    {
+      "name": "ЗАО Меридиан",
+      "inn": "3434343434",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2023-03-03T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Лидер",
+      "inn": "3535353535",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2021-08-08T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Громов",
+      "inn": "3636363636",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2020-02-29T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Океан",
+      "inn": "3737373737",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2021-01-15T00:00:00.000Z"
+    },
+    {
+      "name": "ЗАО Бета",
+      "inn": "3838383838",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2022-11-11T00:00:00.000Z"
+    },
+    {
+      "name": "ЧП Восток",
+      "inn": "3939393939",
+      "status": {
+        "id": 1,
+        "name": "Активен",
+        "color": "green.400"
+      },
+      "registrationDate": "2024-05-01T00:00:00.000Z"
+    },
+    {
+      "name": "ООО Лес",
+      "inn": "4040404040",
+      "status": {
+        "id": 2,
+        "name": "Ожидание",
+        "color": "yellow.400"
+      },
+      "registrationDate": "2023-12-12T00:00:00.000Z"
+    },
+    {
+      "name": "ИП Волков",
+      "inn": "4141414141",
+      "status": {
+        "id": 3,
+        "name": "Заблокирован",
+        "color": "red.400"
+      },
+      "registrationDate": "2020-04-04T00:00:00.000Z"
+    }
+  ]
+}
